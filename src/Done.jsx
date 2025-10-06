@@ -1,10 +1,11 @@
 import React from "react";
 import Checkbox from "./Checkbox";
 export default function Done () {
+   
     return (
         <>
         <div className="flex">
-            <Checkbox  checked="checked" />
+            <Checkbox  checked="checked" readOnly />
             <p>Write an article about @xstate/test</p>
         </div>
         </>

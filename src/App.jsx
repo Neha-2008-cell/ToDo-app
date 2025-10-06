@@ -20,4 +20,7 @@ function App() {
   )
 }
 
-export default App
+export default App;
+
+//cd ~/Desktop/ToDo-app/my-app
+
