@@ -1,8 +1,14 @@
 import React , {useState} from "react";
 
-export default function CreateTodo ({showHide}) {
-    const [ value, setValue ] = useState('');
-   
+export default function CreateTodo ({showHide , refresh2 , setRefresh2 }) {
+    const [value, setValue] = useState('');
+    
+    const oldValue = JSON.parse(localStorage.getItem("saveTask") || '[]' )
+    
+    //const [ storeData, setStoreData ] = useState(array);
+    
+   // updateLocalStorage({ setStoreData })
+
     const update = (event) => {
         setValue(event.target.value)
     }
@@ -15,10 +21,10 @@ export default function CreateTodo ({showHide}) {
         if (value === '') {
         alert('‼️ Please fill a valid Todo ')
         return
-    }
-        const oldValue = JSON.parse(localStorage.getItem("saveTask")) || []
+        }
         const array = [...oldValue, value]
         localStorage.setItem("saveTask", JSON.stringify(array))
+        setRefresh2(!refresh2)
         setValue('')
         showHide(false)
     }
