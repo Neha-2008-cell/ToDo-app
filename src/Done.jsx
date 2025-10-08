@@ -26,7 +26,7 @@ export default function Done ({refresh}) {
           <div key={index} className="flex ">
               
               <Checkbox checked='checked' readOnly />
-               <a onClick={()=>deleteTask(index)} ><RiDeleteBinLine className="text-xl m-1"/></a>
+               <a onClick={()=>deleteTask(index)} ><RiDeleteBinLine className="text-xl m-1 mr-2"/></a>
               <p>{task}</p>
              
               
